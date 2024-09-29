@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Dream Destinations</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #023e8a;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+        }
+
+        .logo h1 {
+            font-size: 30px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 18px;
+            padding: 8px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #f4a261;
+        }
+
+        .cta .btn {
+            background-color: #f4a261;
+            color: #fff;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta .btn:hover {
+            background-color: #e76f51;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 150px 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3); 
+        }
+
+        .hero-content h2 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-content .btn {
+            background-color: #f4a261;
+            color: #fff;
+            padding: 15px 35px;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 40px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .hero-content .btn:hover {
+            background-color: #e76f51;
+        }
+
+        /* Features Section */
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 40px;
+            background-color: #ffffff;
+        }
+
+        .feature {
+            text-align: center;
+            width: 30%;
+            padding: 20px;
+            background-color: #f9fafb;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .feature h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #023e8a;
+        }
+
+        .feature p {
+            font-size: 16px;
+            color: #6b7280;
+        }
+
+        
+        .about {
+            padding: 70px 40px;
+            text-align: center;
+            background-color: #f1f5f9;
+        }
+
+        .about h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #023e8a;
+        }
+
+        .about p {
+            font-size: 18px;
+            color: #6b7280;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about .btn {
+            background-color: #f4a261;
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .about .btn:hover {
+            background-color: #e76f51;
+        }
+
+        
+        .services {
+            background-color: #023e8a;
+            color: #fff;
+            padding: 70px 40px;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .service {
+            margin-bottom: 20px;
+        }
+
+        .service h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #f4a261;
+        }
+
+        .service p {
+            font-size: 16px;
+            color: #d1d5db;
+        }
+
+        
+        footer {
+            background-color: #111827;
+            color: #fff;
+            text-align: center;
+            padding: 30px;
+            font-size: 16px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Travel Treasures</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Destinations</a></li>
+                    <li><a href="#">Tours</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="cta">
+                <a href="#" class="btn">Book Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('background.jpg');">
+        <div class="hero-content">
+            <h2>Embark on a Journey of a Lifetime</h2>
+            <p>Unveil hidden gems and explore the wonders of the world.</p>
+            <a href="#" class="btn">Explore Destinations</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature">
+            <img src="Darjeeling.jpg" alt="Darjeeling, West Bengal" width="300" height="200">
+            <h3>Darjeeling, West Bengal</h3>
+            <p>Breathe in fresh mountain air and enjoy panoramic views from India’s tea capital.</p>
+        </div>
+        <div class="feature">
+            <img src="rishikesh.jpg" alt="Rishikesh, Uttarakhand" width="300" height="200">
+            <h3>Rishikesh, Uttarakhand</h3>
+            <p>Find peace in the spiritual sanctuaries and the majestic landscapes of Rishikesh.</p>
+        </div>
+        <div class="feature">
+            <img src="Andaman & Nicobar Islands.jpg" alt="Andaman and Nicobar Islands" width="300" height="200">
+            <h3>Andaman and Nicobar Islands</h3>
+            <p>Relax on pristine beaches and explore vibrant coral reefs in a tropical paradise.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <h2>About Our Destinations</h2>
+        <p>We offer a wide range of travel packages tailored to your dream destination. Whether you're seeking adventure, relaxation, or cultural experiences, we have something for everyone.</p>
+        <a href="#" class="btn">Learn More</a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>Custom Itineraries</h3>
+            <p>Tailor-made plans for your unique travel experience.</p>
+        </div>
+        <div class="service">
+            <h3>24/7 Support</h3>
+            <p>We’re here to help, any time of day or night.</p>
+        </div>
+        <div class="service">
+            <h3>Travel Insurance</h3>
+            <p>Stay protected with comprehensive travel insurance options.</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Dream Destinations. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
